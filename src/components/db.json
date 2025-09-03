@@ -1,0 +1,53 @@
+{
+  "users": [
+    {
+      "id": "8729",
+      "name": "j rjfi  kj",
+      "email": "k je jkn ekn ",
+      "password": " jkn j kj "
+    },
+    {
+      "id": "a5ba",
+      "name": "vipul",
+      "email": "nirmalkar@test.com",
+      "password": "nimalkar"
+    },
+    {
+      "id": "e1ff",
+      "name": "12345678",
+      "email": "12345678",
+      "password": "12345678"
+    },
+    {
+      "id": "4cd5",
+      "name": "1qaz2wsx",
+      "email": "1qaz2wsx",
+      "password": "1qaz2wsx"
+    },
+    {
+      "id": "ca08",
+      "name": "vipulnirmalkar",
+      "email": "vipulnirmalkar",
+      "password": "vipulnirmalkar"
+    },
+    {
+      "id": "c9ec",
+      "name": "vipulnirmalkar",
+      "email": "vipul.nir.321@gmail.com",
+      "password": "12345678"
+    },
+    {
+      "id": "1e89",
+      "name": "7894561230",
+      "email": "7894561230",
+      "password": "7894561230"
+    },
+    {
+      "id": "2561",
+      "name": "789456",
+      "email": "789456",
+      "password": "789456"
+    }
+  ],
+  "restaurants": []
+}
