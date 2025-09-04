@@ -31,10 +31,9 @@ export default {
   },
   methods: {
     async login() {
-      try {
-        let result = await axios.get("http://localhost:3000/users", {
-          params: { email: this.email, password: this.password },
-        });
+      try {let result = await axios.get(`${API_BASE}/users`, {
+  params: { email: this.email, password: this.password },
+});
 
         if (result.data.length > 0) {
           // ✅ Save user in localStorage (same key as SignUp.vue)
