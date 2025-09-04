@@ -35,11 +35,11 @@ export default {
     async updateRestaurant()
     {
       console.warn(this.restaurant)
-            const result= await axios.put("http://localhost:3000/restaurants/"+this.$route.params.id,{
-        name:this.restaurant.name,
-        address:this.restaurant.address,
-        contact:this.restaurant.contact
-      });
+            const result = await axios.put(`${API_BASE}/restaurants/${this.$route.params.id}`, {
+  name: this.restaurant.name,
+  address: this.restaurant.address,
+  contact: this.restaurant.contact,
+});
       if(result.status===200)
       {
         this.$router.push({name:'Home'});//name is case sensitive
@@ -54,9 +54,12 @@ export default {
       this.$router.push("/sign-up");
     }
 
-    const res=await axios.get("http://localhost:3000/restaurants/"+this.$route.params.id)
-    console.warn(this.$route.params.id)
-    this.restaurant=res.data;
+    //const res=await axios.get("http://localhost:3000/restaurants/"+this.$route.params.id)
+    
+    // this.restaurant=res.data;
+   const res = await axios.get(`${API_BASE}/restaurants/${this.$route.params.id}`);
+   console.warn(this.$route.params.id)
+this.restaurant = res.data;
   },
 };
 </script>
