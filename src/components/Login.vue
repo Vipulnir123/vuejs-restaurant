@@ -17,6 +17,9 @@
 <script>
 import axios from "axios";
 
+import { API_BASE } from "../config";
+
+
 export default {
   // eslint-disable-next-line 
   name: "Login",
