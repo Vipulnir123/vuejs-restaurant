@@ -30,12 +30,12 @@ export default {
   methods: {
     async signUp() {
       try {
-        let result = await axios.post("http://localhost:3000/users", {
-        // let result = await axios.post("https://restaurant-api-gpuc.onrender.com/users", {
-          name: this.name,
-          email: this.email,
-          password: this.password,
-        });
+        let result = await axios.post(`${API_BASE}/users`, {
+  name: this.name,
+  email: this.email,
+  password: this.password,
+});
+        
 
         if (result.status === 201) {
           localStorage.setItem("user-info", JSON.stringify(result.data));
