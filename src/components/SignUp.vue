@@ -17,6 +17,7 @@
 
 <script>
 import axios from "axios";
+  import { API_BASE } from "../config";
 
 export default {
   name: "SignUp",
