@@ -52,7 +52,8 @@ export default {
     methods: {
         async deleteRestaurant(id) {
             // console.warn(id)
-            let result = await axios.delete("http://localhost:3000/restaurants/" + id);
+            //let result = await axios.delete("http://localhost:3000/restaurants/" + id);
+            let result = await axios.delete(`${API_BASE}/restaurants/${id}`);
 
             // console.warn(result)
             if (result.status == 200) {
@@ -67,9 +68,13 @@ export default {
             if (!user) {
                 this.$router.push("/sign-up");
             }
-            let result = await axios.get("http://localhost:3000/restaurants");
+            //let result = await axios.get("http://localhost:3000/restaurants");
+            
+            //this.restaurant = result.data;
+            
+            let result = await axios.get(`${API_BASE}/restaurants`);
             console.warn(result)
-            this.restaurant = result.data;
+this.restaurant = result.data;
         },
     },
 };
