@@ -35,11 +35,11 @@ export default {
     async addRestaurant()
     {
       console.warn(this.restaurant)
-      const result= await axios.post("http://localhost:3000/restaurants",{
-        name:this.restaurant.name,
-        address:this.restaurant.address,
-        contact:this.restaurant.contact
-      });
+      const result = await axios.post(`${API_BASE}/restaurants`, {
+  name: this.restaurant.name,
+  address: this.restaurant.address,
+  contact: this.restaurant.contact,
+});
       if(result.status===201)
       {
         this.$router.push({name:'Home'});//name is case sensitive
