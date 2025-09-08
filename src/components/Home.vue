@@ -21,6 +21,10 @@
       <td>
         <router-link :to="'/update/' + item.id"><button>Update</button></router-link>
         <button @click="deleteRestaurant(item.id)">Delete</button>
+        <router-link :to="'/food/' + item.id">
+  <button>View Food Items</button>
+</router-link>
+
       </td>
     </tr>
   </tbody>
@@ -68,9 +72,7 @@ export default {
             if (!user) {
                 this.$router.push("/sign-up");
             }
-            //let result = await axios.get("http://localhost:3000/restaurants");
-            
-            //this.restaurant = result.data;
+
             
             let result = await axios.get(`${API_BASE}/restaurants`);
             console.warn(result)

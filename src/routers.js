@@ -4,6 +4,8 @@ import SignUp from "./components/SignUp.vue";
 import Login from "./components/Login.vue";
 import Add from "./components/Add.vue";
 import Update from "./components/Update.vue";
+import Food from "./components/Food.vue";
+
 
 const routes = [
   { path: "/home", name: "Home", component: Home },
@@ -11,7 +13,9 @@ const routes = [
   { path: "/login", name: "Login", component: Login },
   { path: "/", redirect: "/sign-up" },   // this fixes the blank page
   { path: "/add", name: "Add", component: Add },
-  { path: "/update/:id", name: "Update", component: Update }
+  { path: "/update/:id", name: "Update", component: Update },
+  { path: "/food/:id", name: "Food", component: Food }
+
 ];
 
 const router = createRouter({

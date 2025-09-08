@@ -30,6 +30,20 @@ export default {
   },
   methods: {
     async signUp() {
+      if (!this.name.trim || !this.email.trim || !this.password.trim) {
+        alert("Please fill in all fields");
+        return;
+      }
+      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      if (!emailRegex.test(this.email)) {
+        alert("Please enter a valid email address!");
+        return;
+      }
+      if (this.password.length < 5) {
+        alert("Password must be at least 5 characters long!");
+        return;
+      }
+
       try {
         let result = await axios.post(`${API_BASE}/users`, {
   name: this.name,
