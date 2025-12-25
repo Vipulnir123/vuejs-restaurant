@@ -44,8 +44,6 @@ export default {
       {
         this.$router.push({name:'Home'});//name is case sensitive
       }
-        
-      console.warn("result",result)
     }
 
 
